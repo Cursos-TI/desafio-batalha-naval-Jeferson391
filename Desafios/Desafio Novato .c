@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    char linha[10] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'};
+    int tabuleiro[10][10];
+
+
+
+    // Inicializa o tabuleiro com zeros
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            tabuleiro[i][j] = 0;
+        }
+    }
+
+    // Imprime os números das colunas
+    printf("   ");
+    for (int j = 0; j < 10; j++) {
+        printf("%d ", j);
+    }
+//Navio na Horizontal
+    tabuleiro[1][5] = 3;
+    tabuleiro[1][6] = 3;
+    tabuleiro[1][7] = 3;
+//Navio na Vertical
+    tabuleiro[4][2] = 3;
+    tabuleiro[5][2] = 3;
+    tabuleiro[6][2] = 3;
+
+    printf("\n");
+
+    // Imprime o tabuleiro com as letras das linhas
+    for (int i = 0; i < 10; i++) 
+    {
+        printf("%c  ", linha[i]); // Letra da linha
+        for (int j = 0; j < 10; j++) 
+        {
+            printf("%d ", tabuleiro[i][j]); // Valor da célula
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
